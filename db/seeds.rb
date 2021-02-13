@@ -7,4 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 john = User.create(name: "John")
+rick = User.create(name: "Rick")
 
+nyc = Location.create(zip: "10128")
+edison = Location.create(zip: "08817")
+
+fav1 = Favorite.create(user_id: john.id, location_id: nyc.id)
+fav2 = Favorite.create(user_id: rick.id, location_id: edison.id)
