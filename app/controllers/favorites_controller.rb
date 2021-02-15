@@ -7,7 +7,11 @@ class FavoritesController < ApplicationController
     end
 
     def create
+        params[:embed]
         
+        Favorite.create(user_id: params[:user_id], zip: params[:zip])
+
+        render json: favorites
     end
 
 end

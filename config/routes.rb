@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show'
   post '/users', to: 'users#create'
 
+  # FAVORITES ROUTES
+  post '/favorites', to: 'favorites#create'
 end

@@ -1,5 +1,4 @@
 class FavoriteSerializer < ActiveModel::Serializer
-  attributes :id, :zip, :user_id
+  attributes :id, :zip, :user_id, :isHome?
 
-  belongs_to :user
 end
