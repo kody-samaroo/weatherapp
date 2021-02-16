@@ -9,9 +9,20 @@ class FavoritesController < ApplicationController
     def create
         params[:embed]
         
-        Favorite.create(user_id: params[:user_id], zip: params[:zip])
+        favorite = Favorite.create(user_id: params[:user_id], zip: params[:zip])
 
-        render json: favorites
+        render json: favorite
+    end
+
+    def destroy
+
+        params[:embed]
+
+        favorite = Favorite.find(params[:id])
+
+        favorite.destroy
+
+        render json: favorite
     end
 
 end

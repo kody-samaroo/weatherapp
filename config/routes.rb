@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   post '/users', to: 'users#create'
 
   # FAVORITES ROUTES
-  post '/favorites', to: 'favorites#create'
+  resources :favorites
+  # post '/favorites', to: 'favorites#create'
+  # delete '/favorites/:id', to: 'favorites#delete'
+
 end
