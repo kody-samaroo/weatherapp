@@ -6,6 +6,14 @@ class FavoritesController < ApplicationController
         render json: favorites
     end
 
+    def show
+        params[:embed]
+
+        favorite = Favorite.find(params[:id])
+
+        render json: favorite
+    end
+
     def create
         params[:embed]
         

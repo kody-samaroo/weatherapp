@@ -14,9 +14,13 @@ class UsersController < ApplicationController
         render json: user
     end
 
-    # private
-    # def user_params
-    #     params.permit(:name)
-    # end
+    def create
+
+        params[:embed]
+        
+        user = User.create(name: params[:newName])
+
+        render json: user
+    end
 
 end
